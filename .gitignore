@@ -1,0 +1,17 @@
+# Local Claude Code settings (machine/user specific)
+.claude/
+
+# Sensitive internal documents — never commit
+*.xlsx
+*.xls
+*.csv
+.env
+.env.*
+
+# Build artifacts
+target/
+*.jar
+
+# OS
+.DS_Store
+Thumbs.db
