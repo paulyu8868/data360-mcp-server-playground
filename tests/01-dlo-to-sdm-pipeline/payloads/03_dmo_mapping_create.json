@@ -1,0 +1,17 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_dmo_mapping_create",
+    "paramsJson": "{\"dataspace\":\"default\",\"request\":{\"sourceEntityDeveloperName\":\"northwind_order_master__dll\",\"targetEntityDeveloperName\":\"northwind_order_master__dlm\",\"fieldMapping\":[{\"sourceFieldDeveloperName\":\"order_id__c\",\"targetFieldDeveloperName\":\"order_id__c\"},{\"sourceFieldDeveloperName\":\"product_code__c\",\"targetFieldDeveloperName\":\"product_code__c\"},{\"sourceFieldDeveloperName\":\"order_amount__c\",\"targetFieldDeveloperName\":\"order_amount__c\"}]}}"
+  },
+  "response": {
+    "developerName": "northwind_order_master__dll_map_northwind_order_master__dlm_1781675800980",
+    "status": "ACTIVE",
+    "fieldMappings": [
+      { "developerName": "order_id__c_fieldmap_order_id__c", "sourceFieldDeveloperName": "order_id__c", "targetFieldDeveloperName": "order_id__c" },
+      { "developerName": "product_code__c_fieldmap_product_code__c", "sourceFieldDeveloperName": "product_code__c", "targetFieldDeveloperName": "product_code__c" },
+      { "developerName": "order_amount__c_fieldmap_order_amount__c", "sourceFieldDeveloperName": "order_amount__c", "targetFieldDeveloperName": "order_amount__c" }
+    ]
+  },
+  "note": "매핑 이름은 {source}_map_{target}_{epoch-ms} 패턴으로 자동 생성됨. 필드 매핑 ID는 {source필드}_fieldmap_{target필드} 패턴. 시스템 필드(KQ_*, DataSource__c 등)는 별도 요청 없이 자동으로 매핑됨."
+}

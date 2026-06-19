@@ -1,0 +1,31 @@
+{
+  "tool": "execute",
+  "failedRequest": {
+    "toolName": "d360_dmo_create",
+    "paramsJson": "{\"request\":{\"apiName\":\"northwind_order_master\",\"label\":\"Northwind Order Master\",\"category\":\"Other\",\"fields\":[{\"apiName\":\"order_id__c\",\"label\":\"Order Id\",\"type\":\"Text\",\"creationType\":\"Custom\"}]}}"
+  },
+  "failedResponse": {
+    "statusCode": 400,
+    "error": "Data 360 API error 400 on /ssot/data-model-objects: [{\"message\":\"Unrecognized field \\\"creationType\\\" at [line:1, column:136]\",\"errorCode\":\"JSON_PARSER_ERROR\"}]"
+  },
+  "gotcha": "fields[] 안에 creationType을 넣으면 400 JSON_PARSER_ERROR. 해당 키를 완전히 제거하고 재요청해야 성공한다.",
+  "successRequest": {
+    "toolName": "d360_dmo_create",
+    "paramsJson": "{\"request\":{\"apiName\":\"northwind_order_master\",\"label\":\"Northwind Order Master\",\"category\":\"Other\",\"fields\":[{\"apiName\":\"order_id__c\",\"label\":\"Order Id\",\"type\":\"Text\",\"isPrimaryKey\":true},{\"apiName\":\"product_code__c\",\"label\":\"Product Code\",\"type\":\"Text\"},{\"apiName\":\"order_amount__c\",\"label\":\"Order Amount\",\"type\":\"Number\"}]}}"
+  },
+  "successResponse": {
+    "category": "OTHER",
+    "creationType": "Custom",
+    "dataSpaceName": "default",
+    "fields": [
+      { "name": "order_id__c", "label": "Order Id", "type": "Text", "creationType": "Custom", "isMapped": false, "isDistinct": false, "usageTag": "None" },
+      { "name": "product_code__c", "label": "Product Code", "type": "Text", "creationType": "Custom", "isMapped": false, "isDistinct": false, "usageTag": "None" },
+      { "name": "order_amount__c", "label": "Order Amount", "type": "Number", "creationType": "Custom", "isMapped": false, "isDistinct": false, "usageTag": "None" },
+      { "name": "KQ_fm_pk__c", "label": "Key Qualifier", "type": "Text", "creationType": "System", "isMapped": false, "isDistinct": false, "usageTag": "KeyQualifier" },
+      { "name": "DataSource__c", "label": "Data Source", "type": "Text", "creationType": "System", "isMapped": false, "isDistinct": false, "usageTag": "None" },
+      { "name": "DataSourceObject__c", "label": "Data Source Object", "type": "Text", "creationType": "System", "isMapped": false, "isDistinct": false, "usageTag": "None" },
+      { "name": "InternalOrganization__c", "label": "Internal Organization", "type": "Text", "creationType": "System", "isMapped": false, "isDistinct": false, "usageTag": "None" }
+    ]
+  },
+  "note": "KQ_*, DataSource__c, DataSourceObject__c, InternalOrganization__c는 Data Cloud가 시스템 필드로 자동 추가함 — 수동으로 만들지 말 것."
+}

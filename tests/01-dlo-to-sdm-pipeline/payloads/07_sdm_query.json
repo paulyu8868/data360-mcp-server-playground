@@ -1,0 +1,37 @@
+{
+  "tool": "execute",
+  "failedRequest": {
+    "toolName": "d360_sdm_query",
+    "paramsJson": "{\"modelApiNameOrId\":\"NorthwindOrderModel\",\"dataspace\":\"default\",\"structuredSemanticQuery\":{\"dimensions\":[\"Region\"],\"measurements\":[\"OrderAmount\"]}}"
+  },
+  "failedResponse": {
+    "error": "Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)",
+    "hint": "payload_examples('d360_sdm_query')로 정확한 스키마를 다시 확인할 것"
+  },
+  "gotcha": "structuredSemanticQuery는 payload_examples 예시상 객체처럼 보이지만 실제 입력 스키마 타입은 string이다. JSON.stringify한 문자열로 전달해야 한다.",
+  "successRequest": {
+    "toolName": "d360_sdm_query",
+    "paramsJson": "{\"modelApiNameOrId\":\"NorthwindOrderModel\",\"dataspace\":\"default\",\"structuredSemanticQuery\":\"{\\\"dimensions\\\":[\\\"Region\\\"],\\\"measurements\\\":[\\\"OrderAmount\\\"]}\"}"
+  },
+  "successResponse": {
+    "status": "SUCCESS",
+    "queryResults": {
+      "queryMetadata": {
+        "fields": {
+          "Region": { "placeInOrder": 0, "type": "VARCHAR", "semanticType": { "semanticDimensionType": "SEMANTIC_DIMENSION_TYPE_TEXT" } },
+          "OrderAmount": { "placeInOrder": 1, "type": "NUMERIC", "semanticType": { "semanticMeasurementType": "SEMANTIC_MEASUREMENT_TYPE_NUMBER" } }
+        }
+      },
+      "queryData": {
+        "rows": [
+          { "values": ["AU", 18230.5] },
+          { "values": ["KR", 942110.25] },
+          { "values": ["JP", 215300.75] },
+          { "values": ["US", 53400.1] },
+          { "values": ["EU", 12900.4] }
+        ]
+      }
+    }
+  },
+  "note": "수치는 전부 가상 데이터로, 실제 매출/회사 데이터가 아님."
+}
