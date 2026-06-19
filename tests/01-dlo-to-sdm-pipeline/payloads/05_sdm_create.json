@@ -1,0 +1,14 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_sdm_create",
+    "paramsJson": "{\"request\":{\"apiName\":\"NorthwindOrderModel\",\"label\":\"Northwind Order Master Model\",\"description\":\"Northwind 주문 마스터 시멘틱 모델 (테스트용 가상 데이터)\",\"dataspace\":\"default\"}}"
+  },
+  "response": {
+    "id": "2SMxx000000000xAAA",
+    "apiName": "NorthwindOrderModel",
+    "label": "Northwind Order Master Model",
+    "dataspace": "default"
+  },
+  "note": "id는 Salesforce 내부 레코드 ID 형식 — org마다 다른 값이 나온다. 예시 값은 가상."
+}

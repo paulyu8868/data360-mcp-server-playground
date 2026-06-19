@@ -1,0 +1,19 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_metadata",
+    "paramsJson": "{\"entityName\":\"northwind_order_master__dlm\",\"entityType\":\"DataModelObject\"}"
+  },
+  "response": {
+    "metadata": [
+      {
+        "fields": [
+          { "name": "product_code__c", "displayName": "Product Code", "type": "STRING", "businessType": "TEXT" },
+          { "name": "order_amount__c", "displayName": "Order Amount", "type": "NUMBER", "businessType": "NUMBER" },
+          { "name": "region__c", "displayName": "Region", "type": "STRING", "businessType": "TEXT" }
+        ]
+      }
+    ]
+  },
+  "note": "Query 패밀리는 이번 테스트에서 d360_metadata(스키마 조회)까지만 검증함. d360_query_sql / d360_query_sql_rows(실제 SQL 실행)는 호출하지 않았음 — 후속 테스트 필요."
+}

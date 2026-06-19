@@ -1,0 +1,31 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_dlo_get",
+    "paramsJson": "{\"dloName\":\"northwind_order_master__dll\"}"
+  },
+  "response": {
+    "dataLakeObjects": [
+      {
+        "category": "Other",
+        "createdDate": "2026-06-10T02:11:00.000Z",
+        "dataLakeFieldInfoRepresentation": [
+          { "name": "order_id__c", "label": "Order Id", "dataType": "Text", "isPrimaryKey": true },
+          { "name": "product_code__c", "label": "Product Code", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "customer_name__c", "label": "Customer Name", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "sales_channel__c", "label": "Sales Channel", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "fulfillment_type__c", "label": "Fulfillment Type", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "region__c", "label": "Region", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "order_amount__c", "label": "Order Amount", "dataType": "Number", "isPrimaryKey": false },
+          { "name": "currency_code__c", "label": "Currency Code", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "exchange_rate__c", "label": "Exchange Rate", "dataType": "Number", "isPrimaryKey": false },
+          { "name": "order_date__c", "label": "Order Date", "dataType": "Date", "isPrimaryKey": false },
+          { "name": "KQ_fm_pk__c", "label": "Key Qualifier", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "DataSource__c", "label": "Data Source", "dataType": "Text", "isPrimaryKey": false },
+          { "name": "DataSourceObject__c", "label": "Data Source Object", "dataType": "Text", "isPrimaryKey": false }
+        ]
+      }
+    ]
+  },
+  "note": "실제 테스트는 45개 필드(커스텀 42 + 시스템 3)였음. 여기선 패턴 확인용으로 10개 커스텀 필드 + 3개 시스템 필드만 표기."
+}

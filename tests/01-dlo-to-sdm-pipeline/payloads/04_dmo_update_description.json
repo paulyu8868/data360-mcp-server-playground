@@ -1,0 +1,11 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_dmo_update",
+    "paramsJson": "{\"dmoDeveloperName\":\"northwind_order_master__dlm\",\"request\":{\"fields\":[{\"apiName\":\"order_amount__c\",\"description\":\"주문 1건의 결제 금액 (현지 통화 기준, 가상 예시)\"}]}}"
+  },
+  "response": {
+    "status": "SUCCESS"
+  },
+  "knownLimitation": "200 OK가 돌아오지만 d360_dmo_get / d360_sdm_dimensions_list / d360_metadata 어느 응답에도 description 필드 자체가 노출되지 않아 API만으로는 실제 반영 여부를 확인할 방법이 없음. Setup → Data Model UI에서 직접 확인/입력하는 것이 현재 유일하게 검증 가능한 경로."
+}

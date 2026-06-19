@@ -1,0 +1,19 @@
+{
+  "tool": "execute",
+  "request": {
+    "toolName": "d360_sdm_data_object_create",
+    "paramsJson": "{\"modelApiNameOrId\":\"NorthwindOrderModel\",\"dataspace\":\"default\",\"request\":{\"dataObjectName\":\"Northwind_Order_Master\",\"label\":\"Northwind Order Master\",\"dataObjectType\":\"Dmo\",\"shouldIncludeAllFields\":true}}"
+  },
+  "response": {
+    "dataObjectName": "Northwind_Order_Master",
+    "dimensions": [
+      { "name": "ProductCode", "sourceField": "product_code__c", "type": "TEXT" },
+      { "name": "SalesChannel", "sourceField": "sales_channel__c", "type": "TEXT" },
+      { "name": "Region", "sourceField": "region__c", "type": "TEXT" }
+    ],
+    "measurements": [
+      { "name": "OrderAmount", "sourceField": "order_amount__c", "type": "NUMBER", "defaultAggregation": "SUM" }
+    ]
+  },
+  "note": "실제 테스트에서는 38개 dimension + 7개 measurement가 자동 분류됨 (텍스트/날짜 계열 → dimension, 숫자 계열 → measurement, 숫자 필드에는 기본 SUM aggregation 자동 할당). 데이터 객체 in-place 갱신 API는 없음 — d360_sdm_data_object_delete 후 재생성하는 것이 갱신 우회 방법으로 쓰였음."
+}

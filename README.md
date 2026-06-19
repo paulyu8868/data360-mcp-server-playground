@@ -9,11 +9,11 @@
 
 | 패밀리 | 상태 |
 |---|---|
-| DLO | ✅ 테스트 완료 |
-| DMO | ✅ 테스트 완료 |
-| Mappings | ✅ 테스트 완료 |
-| SDM | ✅ 테스트 완료 |
-| Query | ✅ 테스트 완료 |
+| DLO | [✅ 테스트 완료](tests/01-dlo-to-sdm-pipeline/README.md) |
+| DMO | [✅ 테스트 완료](tests/01-dlo-to-sdm-pipeline/README.md) |
+| Mappings | [✅ 테스트 완료](tests/01-dlo-to-sdm-pipeline/README.md) |
+| SDM | [✅ 테스트 완료](tests/01-dlo-to-sdm-pipeline/README.md) |
+| Query | [✅ 테스트 완료](tests/01-dlo-to-sdm-pipeline/README.md) |
 | CalculatedInsights | 🔲 예정 |
 | Connection | 🔲 예정 |
 | DataStreams | 🔲 예정 |
